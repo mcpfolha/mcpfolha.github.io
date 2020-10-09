@@ -1,0 +1,9 @@
+html,body{
+  padding: 0px;
+  margin: 0;
+}
+#h_top{
+  color: #fff;
+  font-size: 10pt;
+  background-color: #000;
+}
