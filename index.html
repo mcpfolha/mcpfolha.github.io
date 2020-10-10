@@ -26,7 +26,7 @@
     <div class="col-9" id="day">
     <script>
       days = ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"]
-      months = ["Janeiro","Fevereiro","Março","Maio","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
+      months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
       
       now = new Date
       document.querySelector('#day'). innerText = days[now.getDay()]+", "+now.getDate()+" de "+months[now.getMonth()]+" de "+now.getFullYear()
