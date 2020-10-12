@@ -6,4 +6,5 @@ html,body{
   color: #fff;
   font-size: 10pt;
   background-color: #000;
+  display: flex;
 }
