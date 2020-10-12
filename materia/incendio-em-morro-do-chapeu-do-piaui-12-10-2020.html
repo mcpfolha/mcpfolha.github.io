@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Incêndio em Morro do Chapéu do Piauí. Incêndio na cidade no dia das crianças. Incêndio no Bairro São Francisco.">
+  <meta name="author" content="@i.geanp Gean Araujo">
+
+  <title>INCÊNDIO EM MORRO DO CHAPÉU DO PIAUÍ — MCP FOLHA</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Bootstrap CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    
+   
+  <div id="h_top">
+    <div class="col-9" id="day">
+    <script>
+      days = ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"]
+      months = ["Janeiro","Fevereiro","Março","Maio","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
+      
+      now = new Date
+      document.querySelector('#day'). innerText = days[now.getDay()]+", "+now.getDate()+" de "+months[now.getMonth()]+" de "+now.getFullYear()
+    </script>
+    </div>
+    
+    <div class="col-3" id="weather">
+    <script>
+      let weather = document.querySelector('#weather')
+      let url = 'http://api.openweathermap.org/data/2.5/weather?lat=-3.7415834&lon=-42.3117139&appid=aeb43d5052c03fecd126af58fb380f8f'
+      
+      fetch(url)
+      .then((data) => {
+        return data.json()
+      })
+      .then((data) => {
+        weather.innerText = (data.main.temp-273.15).toFixed(1)+" ºC"
+      })
+      .catch((err) => {
+        weather.innerText = '-'
+      })
+    </script>
+    </div>
+  </div>
+  
+  
+  <div>
+  <h1>INCÊNDIO EM MORRO DO CHAPÉU DO PIAUÍ</h1>
+  </div>
+  </header>
+  
+  <div id="materia" class="container" name="materia">
+    <img width="90%" src="images/fogo-mcp-001.jpg" alt="Inicio no incêndio em Morro do Chapéu do Piauí. Foto tirada por volta das 14h"><span class="text-muted">Inicio no incêndio em Morro do Chapéu do Piauí. Foto tirada por volta das 14h</span>
+    <p>
+      O povo da cidade de Morro do Chapéu do Piauí foi surpreendido com chamas nesta Segunda-feira (12/10). A queimada iniciou por volta das 14h, ou pelo menos, foi quando foi primeiro avistado pelos moradores do Bairro São Francisco.
+    </p>
+    
+    <div>
+    <div col-5>
+    <p>
+      O fogo se espalhou de forma rápida, preocupando os moradores desta área, que rapidamente se prontificaram em tentar apagar o incêndio com seus próprios baldes.
+    </p>
+    </div>
+    <div class="col-7">
+      <img width="50%" src="images/fogo-mcp-003.jpg">
+    </div>
+    </div>
+    <p>
+      Segundo presentes, as chamas invadiram o quintal do agente de saúde do bairro (conhecido popularmente como Novo).
+      &quot;O fogo entrou no cercado e queimou a casa das galinhas, matando todas elas e os pintinhos queimados&quot;, disse uma moradora.
+    </p>
+    <p>
+      Ainda outra moradora disse: "Agora eu sei como o pessoal da Amazônia se sentem quando pega fogo lá". Certamente essas palavras repassam o desespero sentido em meio a tragédia.
+    </p>
+    <p>
+      Boatos dizem que o fogo foi provocado por foguetes. Não se sabe ao certo ainda quem é o responsável por tal obra em uma área de risco. Mas o que os moradores esperam é que o mesmo pague o prejuízo e o desespero causado.
+    </p>
+    <img width="90%" src="images/fogo-mcp-004.jpg">
+    <p>
+      Felizmente, para fim do desespero, foi-se providenciado um carro pipa para ajudar a apagar o incêndio. Embora tenha sido demorado a tomada de tal iniciativa, não foi tarde demais. E assim os moradores ficaram foram tranquilizados.
+    </p>
+  </div>
+  
+  
+  <script src="main.js"></script>
+  
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
